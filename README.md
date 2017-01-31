@@ -30,7 +30,7 @@ Topics include:
 
 2. Clone this repository into your local machine using the terminal (mac) or Gitbash (PC) 
 
-    `git clone https://github.com/btreepress/angular2-step-by-step.git`
+    `git clone git@github.com:bTreePress/Angular-2-Step-By-Step.git`
     
 3. CD to the folder
 
