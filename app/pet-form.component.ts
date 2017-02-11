@@ -1,6 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
 import {PetService} from './pet.service';
+import {lookupListToken} from './providers';
 
 
 
@@ -15,7 +16,7 @@ export class PetFormComponent {
   constructor(
     private formBuilder: FormBuilder,
     private petService: PetService,
-    @Inject('lookupListToken') public lookupLists){}
+    @Inject(lookupListToken) public lookupLists){}
 
 
 

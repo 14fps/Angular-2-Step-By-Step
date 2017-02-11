@@ -1,10 +1,8 @@
 <header>
-  {{ Pets }}
+  {{ Pets | catagoryList }}
 </header>
 
 <section>
-  {{money}}
-  {{Fosters}}
   <shelter-pet
    [ngClass]="{
      'type-dog': pet.type==='Dogs', 'type-cat':pet.type==='Cats'

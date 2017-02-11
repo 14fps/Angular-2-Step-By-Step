@@ -8,18 +8,7 @@ import { CategoryListPipe } from './category-list.pipe';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PetFormComponent } from './pet-form.component';
 import {PetService} from './pet.service';
-
-const lookupLists = {
-  types: [
-      {
-      single: 'Cat',
-      plural: 'Cats'
-      },
-      {
-      single: 'Dog',
-      plural: 'Dogs'
-    }]
-}
+import { lookupLists,lookupListToken } from './providers';
 
 @NgModule({
   imports: [
@@ -36,7 +25,7 @@ const lookupLists = {
   ],
   providers:[
     PetService,
-    { provide: 'lookupListToken',useValue:lookupLists}
+    { provide: lookupListToken,useValue:lookupLists}
   ],
 
   bootstrap: [ 
