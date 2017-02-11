@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {PetService} from './pet.service'
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -10,10 +11,25 @@ import {PetService} from './pet.service'
 export class PetListComponent {
   type='';
   Pets=[];
-  constructor(private petService: PetService){}
+  paramsSubscription;
+  constructor(
+    private petService: PetService,
+    private activatedRoute: ActivatedRoute
+  ){}
 
   ngOnInit(){
-    this.getPets(this.type);
+    this.paramsSubscription = this.activatedRoute.params
+      .subscribe(params => {
+        let type = params['type'];
+        if(type.toLowerCase() === 'all'){
+            type='';
+        }
+        this.getPets(type);
+      })
+  }
+
+  ngOnDestroy() {
+    this.paramsSubscription.unsubscribe();
   }
 
     getPets(type) {
