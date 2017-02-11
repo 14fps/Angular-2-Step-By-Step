@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { FormGroup, FormControl} from '@angular/forms';
+import { FormGroup, FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'foster-pet-form',
@@ -8,19 +8,23 @@ import { FormGroup, FormControl} from '@angular/forms';
 })
 export class PetFormComponent {
   form;
-  ngOnInit(){
+
+  ngOnInit() {
     this.form = new FormGroup({
-      type:new FormControl('Cats'),
-      name:new FormControl(''),
-      category:new FormControl(''),
-      year:new FormControl(''),
-      
+      type: new FormControl('Cats'),
+     name: new FormControl('', Validators.compose([
+        Validators.required,
+        Validators.pattern('[\\w\\-\\s\\/]+')
+      ])),
+      category: new FormControl(''),
+      year: new FormControl(''),
     });
-  }   
-  onSubmit(pet) {
-    console.log(pet);
   }
 
  
 
+  onSubmit(mediaItem) {
+    console.log(mediaItem);
+  }
 }
+
