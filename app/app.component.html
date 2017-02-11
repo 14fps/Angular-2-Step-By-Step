@@ -1,20 +1,24 @@
+
+<nav>
+    <a (click)="getPets('')">
+    <img src="media/04.png" class="icon" />
+  </a>
+  <a  (click)="getPets('Cats')">
+    <img src="media/03.png" class="icon" />
+  </a>
+  <a (click)="getPets('Dogs')">
+    <img src="media/02.png" class="icon" />
+  </a>
+</nav>
+
 <section>
 <header>
   <h1>Shelter App - The Pet Republic</h1>
   <p class='description'>
     Free Shelter Software - Help Make Your City A NOKILL City Foster Or Adopt A Pet Today.
     
-  </p>
+  </p>  
 </header>
-
-<foster-pet-form></foster-pet-form>
-<foster-pet-list></foster-pet-list>
- 
-
-
-
-
+ <router-outlet></router-outlet>
  </section>
- <footer>
-   <br> Get more information about fostering or a adopting a pet at <a href='ThePetRepublic.com/Foster'>ThePetRepublic.com/Foster/</a>
- </footer>
+ 
