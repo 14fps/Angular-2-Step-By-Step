@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule , XHRBackend} from '@angular/http';
 
 //tpr shelter/foster modules
 import { AppComponent } from './app.component';
@@ -12,6 +12,7 @@ import { CategoryListPipe } from './category-list.pipe';
 import { PetFormComponent } from './pet-form.component';
 import { PetService} from './pet.service';
 import { lookupLists,lookupListToken } from './providers';
+import {MockXHRBackend} from './mock-xhr-backend'
 
 @NgModule({
   imports: [
@@ -29,7 +30,8 @@ import { lookupLists,lookupListToken } from './providers';
   ],
   providers:[
     PetService,
-    { provide: lookupListToken,useValue:lookupLists}
+    { provide: lookupListToken,useValue:lookupLists},
+    {provide: XHRBackend, useClass: MockXHRBackend}
   ],
 
   bootstrap: [ 

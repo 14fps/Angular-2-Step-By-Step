@@ -7,7 +7,7 @@
     "type": "git",
     "url": "https://github.com/bTreePress/angular-2-step-by-step-beginner-to-advanced"
   },
-  "scripts": {
+"scripts": {
     "clean": "rimraf app/**/*.js app/**/*.js.map",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
