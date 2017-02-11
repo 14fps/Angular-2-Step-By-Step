@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import {PetComponent} from './pet.component';
 import {PetListComponent} from './pet-list.component';
+import { FosterRequestDirective } from './fosterRequest.directive';
+
 
 @NgModule({
   imports: [
@@ -11,10 +13,12 @@ import {PetListComponent} from './pet-list.component';
   declarations: [
     AppComponent,
     PetComponent,
-    PetListComponent
+    PetListComponent ,
+    FosterRequestDirective
+    
     
   ],
-  bootstrap: [
+  bootstrap: [ 
     AppComponent
   ]
 })

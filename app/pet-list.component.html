@@ -1,8 +1,11 @@
  
 <section>
   <shelter-pet
-    *ngFor="let Pet of Pets"
-    [pet]="Pet"
+   [ngClass]="{
+     'type-dog': pet.type==='Dogs', 'type-cat':pet.type==='Cats'
+     }"
+    *ngFor="let pet of Pets"
+    [pet]="pet"
     (delete) = "onMediaItemDelete($event)">
    </shelter-pet>
 </section>
