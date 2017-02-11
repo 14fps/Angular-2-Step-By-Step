@@ -6,9 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app/pet.component.css']
 })
 export class PetComponent {
-  name='Atom';
+   
 
-  isFostered(){
-    return true;
-  }
+  
 }
