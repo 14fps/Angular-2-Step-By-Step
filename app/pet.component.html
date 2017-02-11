@@ -5,7 +5,7 @@
  
 </div>
 <div style='padding:10px;'>
-  <h2>{{pet.name}}</h2>
+  <h2>{{pet.name | slice : 0 : 4 | uppercase}}</h2>
 </div>
 <div class="tools">
   <a class="adopt" >
@@ -19,7 +19,7 @@
 <div>{{pet.category}}</div>
 <div>{{pet.year}}</div>
 <div class="tools">
-  Foster Request = {{pet.fosterRequest}}
+  Foster Request = {{pet.fosterRequest  }}
   <svg
     class="fosterRequest" xmlns="http://www.w3.org/2000/svg" 
     
@@ -34,7 +34,7 @@
 
 <!-- can never makes it to the DOM --> 
 <template [ngIf]="pet.fosteredOn">
-  Started Foster On {{ pet.fosteredOn }}
+  Started Foster On {{ pet.fosteredOn | date : 'shortDate'}}
 </template>
 
 <!--
