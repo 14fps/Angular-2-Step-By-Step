@@ -1,0 +1,11 @@
+ 
+<section>
+  <shelter-pet
+    *ngFor="let Pet of Pets"
+    [pet]="Pet"
+    (delete) = "onMediaItemDelete($event)">
+   </shelter-pet>
+</section>
+ 
+
+ 
