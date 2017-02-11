@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import {PetComponent} from './pet.component';
 import {PetListComponent} from './pet-list.component';
 import { FosterRequestDirective } from './fosterRequest.directive';
+ import { CategoryListPipe } from './category-list.pipe';
 
 
 @NgModule({
@@ -14,8 +15,9 @@ import { FosterRequestDirective } from './fosterRequest.directive';
     AppComponent,
     PetComponent,
     PetListComponent,
-    FosterRequestDirective
-    
+    FosterRequestDirective,
+    CategoryListPipe
+
     
   ],
   bootstrap: [ 
