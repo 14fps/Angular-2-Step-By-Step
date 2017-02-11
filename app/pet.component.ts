@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 
 @Component({
   selector: 'pet',
@@ -6,9 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app/pet.component.css']
 })
 export class PetComponent {
+  @Input() pet;
    onFoster(){
      console.log("Pet was fostered");
-   }
- 
-  
+   } 
 }
