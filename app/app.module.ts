@@ -9,7 +9,7 @@ import { CategoryListPipe } from './category-list.pipe';
 import { ReactiveFormsModule } from '@angular/forms';
 //new petForm
 import { PetFormComponent } from './pet-form.component';
-
+import {PetService} from './pet.service';
 @NgModule({
   imports: [
     BrowserModule,
@@ -22,9 +22,11 @@ import { PetFormComponent } from './pet-form.component';
     FosterRequestDirective,
     CategoryListPipe,
     PetFormComponent
-
-    
   ],
+  providers:[
+    PetService
+  ],
+
   bootstrap: [ 
     AppComponent
   ]
