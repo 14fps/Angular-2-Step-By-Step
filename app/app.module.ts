@@ -13,7 +13,7 @@ import { FosterRequestDirective } from './fosterRequest.directive';
   declarations: [
     AppComponent,
     PetComponent,
-    PetListComponent ,
+    PetListComponent,
     FosterRequestDirective
     
     

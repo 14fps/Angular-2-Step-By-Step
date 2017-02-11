@@ -4,6 +4,8 @@
 	"editor.insertSpaces": true,
 	"files.exclude": {
 		"**/node_modules": {},
+		"**/.vscode": {},
+		"**/.idea": {},
 		"typings": {},
 		"app/**/*.js": {},
 		"**/*.map": {},
@@ -12,6 +14,5 @@
 		}
 	}
 ,
-"typescript.check.workspaceVersion": false,
-"vsicons.presets.angular": true
+"typescript.check.workspaceVersion": false
 }
