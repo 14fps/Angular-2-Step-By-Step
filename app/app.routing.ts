@@ -1,4 +1,5 @@
-import { Routes } from '@angular/router'
+import { Routes, RouterModule } from '@angular/router'
+
 import { PetFormComponent } from './pet-form.component'
 import { PetListComponent } from './pet-list.component'
 
@@ -8,3 +9,6 @@ const appRoutes: Routes = [
   { path:'', pathMatch:'full', redirectTo: 'all'},
   
 ];
+
+
+export const routing = RouterModule.forRoot(appRoutes);
