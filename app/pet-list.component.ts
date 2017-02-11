@@ -12,9 +12,11 @@ export class PetListComponent {
   constructor(private petService: PetService){}
 
   ngOnInit(){
+    this.Pets = this.petService.get()
+    .subscribe(pets => {
+      this.Pets = pets;
+    })
     
-    this.Pets = this.petService.get();
-    console.log(this.Pets);
   }
 
 

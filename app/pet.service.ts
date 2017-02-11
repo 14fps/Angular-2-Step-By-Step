@@ -1,7 +1,17 @@
+import { Injectable } from '@angular/core';
+import { Http} from '@angular/http';
+import 'rxjs/add/operator/map';
+
+@Injectable()
 export class PetService {
+   constructor(private http: Http) {}
+
 
   get(){
-    return this._pets;
+     return this.http.get('pets'  )
+      .map(response => {
+        return response.json().pets;
+      });
   }
 
   add(Pet){
