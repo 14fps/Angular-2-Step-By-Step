@@ -26,12 +26,17 @@ export class PetFormComponent {
         return null;
       }
       let year = parseInt(control.value);
-      let minYear = 1950;
-      let maxYear = 2020;
+      let minYear = 2000;
+      let maxYear = 3000;
       if (year >= minYear && year <= maxYear) {
       return null;
       } else {
-        return { 'year': true};
+        return {
+        'year': {
+          min: minYear,
+          max: maxYear
+        }
+      };
     }
   }
 
