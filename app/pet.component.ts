@@ -1,13 +1,18 @@
-import { Component,Input } from '@angular/core';
+import { Component,Input ,Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'pet',
+  selector: 'shelter-pet',
   templateUrl: './app/pet.component.html',
   styleUrls: ['./app/pet.component.css']
 })
 export class PetComponent {
+  
   @Input() pet;
+  @Output() foster = new EventEmitter();
+
    onFoster(){
-     console.log("Pet was fostered");
+     console.log('onFoster Clicked sheler-pet component');
+     this.foster.emit ();
+
    } 
 }

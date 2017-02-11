@@ -7,14 +7,19 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
+
+  onPetFoster(pet){
+    console.log('app.component foster event raised');
+  }
+ 
    firstPet = {
       id: 2,
       name: "Atom",
       picture: "media/dogs/1.jpg",
       type: "Dogs",
-      category: "Rag Doll",
+category: "Yorkshire Terrier",
       year: 2015,
-      fosteredOn: null,
+      fosteredOn: 1294166565384,
       fosterRequest: true
     }
 }

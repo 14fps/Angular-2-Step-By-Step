@@ -3,8 +3,20 @@
   <h1>Shelter App - The Pet Republic</h1>
   <p class='description'>
     Free Shelter Software - Help Make Your City A NOKILL City Foster Or Adopt A Pet Today.
-    <br> Get More Information <a href='ThePetRepublic.com/Foster'>@ThePetRepublic.com/Foster/</a>
+    
   </p>
 </header>
- <pet [pet]="firstPet" ></pet>
+ 
+<shelter-pet 
+  [pet]="firtstPet"
+  (foster)="onPetFoster($event)
+  ">
+</shelter-pet>
+
+
+
+
  </section>
+ <footer>
+   <br> Get more information about fostering or a adopting a pet at <a href='ThePetRepublic.com/Foster'>ThePetRepublic.com/Foster/</a>
+ </footer>
