@@ -1,4 +1,6 @@
 import { Component, Inject } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
 import {PetService} from './pet.service';
 import {lookupListToken} from './providers';
@@ -16,7 +18,8 @@ export class PetFormComponent {
   constructor(
     private formBuilder: FormBuilder,
     private petService: PetService,
-    @Inject(lookupListToken) public lookupLists){}
+    @Inject(lookupListToken) public lookupLists,
+    private router: Router){}
 
 
 
@@ -53,7 +56,9 @@ export class PetFormComponent {
 
   onSubmit(pet) {
    this.petService.add(pet)
-   .subscribe();
+   .subscribe(()=> {
+     this.router.navigate(['/',pet.type]);
+   });
   }
 }
 
