@@ -5,11 +5,22 @@ import {PetComponent} from './pet.component';
 import {PetListComponent} from './pet-list.component';
 import { FosterRequestDirective } from './fosterRequest.directive';
 import { CategoryListPipe } from './category-list.pipe';
-//add both of these form modules
 import { ReactiveFormsModule } from '@angular/forms';
-//new petForm
 import { PetFormComponent } from './pet-form.component';
 import {PetService} from './pet.service';
+
+const lookupLists = {
+  types: [
+      {
+      single: 'Cat',
+      plural: 'Cats'
+      },
+      {
+      single: 'Dog',
+      plural: 'Dogs'
+    }]
+}
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -24,7 +35,8 @@ import {PetService} from './pet.service';
     PetFormComponent
   ],
   providers:[
-    PetService
+    PetService,
+    { provide: 'lookupListToken',useValue:lookupLists}
   ],
 
   bootstrap: [ 

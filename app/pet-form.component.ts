@@ -14,9 +14,8 @@ export class PetFormComponent {
   
   constructor(
     private formBuilder: FormBuilder,
-    private petService: PetService
-    
-    ){  }
+    private petService: PetService,
+    @Inject('lookupListToken') public lookupLists){}
 
 
 
