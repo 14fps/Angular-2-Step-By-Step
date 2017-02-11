@@ -1,10 +1,5 @@
 # Angular 2 Step By Step With Luke Angel
-## Section: Component Styles
 
-We have the AppComponent with its metadata configured for the selector and the template URL.Let's see what we can do about giving it some style.Angular provides support for styling a component via the component metadata in two ways.Similar to how templates work,we can use either the style's property or the style URL's property.Both take an array of string values.So they are a little different than the template ones.Lets start with the styles property.  
-
-
-#Full Course
 This is the repository for my course **Angular 2 Step By Step**  
 The full course is available at 
 http://btreepress.com/blog/portfolio-items/angular-2-step-by-step-from-beginner-to-advanced/
@@ -49,7 +44,7 @@ Topics include:
 
     `npm start`
 
-The repository has a branch for each video starting point. For example, the branch **2-1** is used as the starting code for the video *2-1 Module and *. You can checkout branches using `git checkout <branchname>` and not have to re-run `npm install` each time since you will remain in the same root folder.
+The repository has a branch for each video starting point. For example, the branch **02-01b** is used as the starting code for the video *02-01 NgModule and the root module*. You can checkout branches using `git checkout <branchname>` and not have to re-run `npm install` each time since you will remain in the same root folder.
 
 Note that the site will run using `lite-server` and will be served up at the following local address:  
     http://localhost:3000
