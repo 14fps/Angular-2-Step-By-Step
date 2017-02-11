@@ -1,19 +1,23 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+
+//tpr shelter/foster modules
 import { AppComponent } from './app.component';
-import {PetComponent} from './pet.component';
-import {PetListComponent} from './pet-list.component';
+import { PetComponent} from './pet.component';
+import { PetListComponent} from './pet-list.component';
 import { FosterRequestDirective } from './fosterRequest.directive';
 import { CategoryListPipe } from './category-list.pipe';
-import { ReactiveFormsModule } from '@angular/forms';
 import { PetFormComponent } from './pet-form.component';
-import {PetService} from './pet.service';
+import { PetService} from './pet.service';
 import { lookupLists,lookupListToken } from './providers';
 
 @NgModule({
   imports: [
     BrowserModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+    HttpModule 
   ],
   declarations: [
     AppComponent,
