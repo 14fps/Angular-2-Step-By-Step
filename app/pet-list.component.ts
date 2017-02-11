@@ -8,18 +8,22 @@ import {PetService} from './pet.service'
   styleUrls: ['./app/pet-list.component.css']
 })
 export class PetListComponent {
-  Pets;
+  type='';
+  Pets=[];
   constructor(private petService: PetService){}
 
   ngOnInit(){
-    this.Pets = this.petService.get()
-    .subscribe(pets => {
-      this.Pets = pets;
-    })
-    
+    this.getPets(this.type);
   }
 
-
+    getPets(type) {
+    this.type = type;
+    this.petService.get(type)
+      .subscribe(pets => {
+        this.Pets = pets;
+      });
+  }
+ 
    onPetFoster(pet) {
     //  console.log('pet Foster and communicated to pet  List')
      this.petService.delete(pet);
