@@ -1,5 +1,8 @@
 import { Component, Inject } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
+import {PetService} from './pet.service';
+
+
 
 @Component({
   selector: 'foster-pet-form',
@@ -8,7 +11,14 @@ import { FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
 })
 export class PetFormComponent {
   form;
-  constructor(private formBuilder: FormBuilder){  }
+  
+  constructor(
+    private formBuilder: FormBuilder,
+    private petService: PetService
+    
+    ){  }
+
+
 
   ngOnInit() {
     this.form = this.formBuilder.group({
@@ -41,8 +51,8 @@ export class PetFormComponent {
     }
   }
 
-  onSubmit(mediaItem) {
-    console.log(mediaItem);
+  onSubmit(pet) {
+   this.petService.add(pet);
   }
 }
 

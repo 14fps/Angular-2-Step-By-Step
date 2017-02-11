@@ -1,15 +1,19 @@
 <header>
-  {{ Pets | catagoryList }}
+  {{ Pets }}
 </header>
 
 <section>
+  {{money}}
+  {{Fosters}}
   <shelter-pet
    [ngClass]="{
      'type-dog': pet.type==='Dogs', 'type-cat':pet.type==='Cats'
      }"
     *ngFor="let pet of Pets"
     [pet]="pet"
-    (delete) = "onMediaItemDelete($event)">
+    (foster) = "onPetFoster($event)"
+    (adopt) = "onPetAdopt($event)"
+    >
    </shelter-pet>
 </section>
  

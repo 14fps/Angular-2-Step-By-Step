@@ -8,10 +8,10 @@
   <h2>{{pet.name   | uppercase}}</h2>
 </div>
 <div class="tools">
-  <a class="adopt" >
+  <a class="adopt" (click)="onAdopt()" >
     Adopted
   </a>
-  <a class="foster" (click)="onFoster()" >
+  <a class="foster"(click)="onFoster() " >
     Foster
   </a>
 </div>

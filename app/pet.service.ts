@@ -1,23 +1,30 @@
 export class PetService {
 
   get(){
-    return this.Pets;
+    return this._pets;
   }
 
   add(Pet){
-    this.Pets.push(Pet);
-  }
+    Pet.picture = "media/" +
+          Pet.type
+              +
+          "/000.png";
+    this._pets.push(Pet);
+  } 
 
   delete(Pet){
-    let index = this.Pets.indexOf(Pet);
+    let index = this._pets.indexOf(Pet);
     if(index >= 0){
-        this.Pets.splice(index,1);
+        this._pets.splice(index,1);
     }
   }
 
+  adopt(Pet){
+    console.log('adopt logic goes  here');
+  }
 
   
-  Pets = [
+  _pets = [
      {
       id: 2,
       name: "Atom",
