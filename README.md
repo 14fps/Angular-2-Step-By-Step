@@ -34,7 +34,7 @@ Topics include:
     
 3. CD to the folder
 
-    `cd angular2-step-by-step`
+    `cd angular-2-step-by-step`
     
 4. Run the following to install the project dependencies:
 
