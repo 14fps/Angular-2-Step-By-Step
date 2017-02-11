@@ -52,7 +52,8 @@ export class PetFormComponent {
   }
 
   onSubmit(pet) {
-   this.petService.add(pet);
+   this.petService.add(pet)
+   .subscribe();
   }
 }
 

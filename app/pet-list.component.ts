@@ -26,7 +26,10 @@ export class PetListComponent {
  
    onPetFoster(pet) {
     //  console.log('pet Foster and communicated to pet  List')
-     this.petService.delete(pet);
+      this.petService.delete(pet)
+      .subscribe(() => {
+        this.getPets(this.type);
+      });
   }
 
 

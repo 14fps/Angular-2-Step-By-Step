@@ -21,15 +21,16 @@ export class PetService {
           Pet.type
               +
           "/000.png";
-    this._pets.push(Pet);
+    return this.http.post('pets',Pet)
+         .map(response => {});
+        
   } 
 
-  delete(Pet){
-    let index = this._pets.indexOf(Pet);
-    if(index >= 0){
-        this._pets.splice(index,1);
-    }
+  delete(pet) {
+    return this.http.delete(`pets/${pet.id}`)
+      .map(response => {});
   }
+ 
 
   adopt(Pet){
     console.log('adopt logic goes  here');
