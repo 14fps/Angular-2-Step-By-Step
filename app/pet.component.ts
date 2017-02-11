@@ -6,7 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app/pet.component.css']
 })
 export class PetComponent {
-   
-
+   onFoster(){
+     console.log("Pet was fostered");
+   }
+ 
   
 }
