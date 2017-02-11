@@ -17,11 +17,23 @@ export class PetFormComponent {
         Validators.pattern('[\\w\\-\\s\\/]+')
       ])),
       category: new FormControl(''),
-      year: new FormControl(''),
+      year: new FormControl('', this.yearValidator),
     });
   }
 
- 
+   yearValidator(control) {
+      if (control.value.trim().length === 0) {
+        return null;
+      }
+      let year = parseInt(control.value);
+      let minYear = 1950;
+      let maxYear = 2020;
+      if (year >= minYear && year <= maxYear) {
+      return null;
+      } else {
+        return { 'year': true};
+    }
+  }
 
   onSubmit(mediaItem) {
     console.log(mediaItem);
