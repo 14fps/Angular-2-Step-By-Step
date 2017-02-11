@@ -2,26 +2,26 @@
   <h2>Add A Foster</h2>
 </header>
 <form
- #petForm = "ngForm"
- (ngSubmit)=onSubmit(petForm.value)
+  [formGroup]="form"
+ (ngSubmit)=onSubmit(form.value)
 >
 
   <ul>
     <li>
       <label for="type">Type</label>
-      <select name="type"  id="type"  ngModel >
+      <select name="type"  id="type"  formControlName="type" >
         <option value="Cats">Cat</option>
         <option value="Dogs">Dogs</option>
       </select>
     </li>
     <li>
       <label  >Name</label>
-      <input type="text" name="name" id="name"  ngModel >
+      <input type="text" name="name" id="name"  formControlName="name" >
       
     </li>
     <li>
       <label  >Category</label>
-      <select name="category" id="category" ngModel  >
+      <select name="category" id="category" formControlName="category"  >
         <option value="Mix">Mix</option>
         <option value="Shiba Inu">Shiba Inu</option>
         <option value="Tabby">Tabby</option>
@@ -32,7 +32,7 @@
     </li>
     <li>
       <label for="year">Year</label>
-      <input type="text" name="year" id="year"  ngModel >
+      <input type="text" name="year" id="year"  formControlName="year" >
     </li>
   </ul>
   <button type="submit"  >Save</button>
